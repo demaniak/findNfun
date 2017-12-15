@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: N Finder
+    finder:
+      impl: Div2Finder
