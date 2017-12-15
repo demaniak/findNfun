@@ -29,7 +29,7 @@ public class FindNApplication {
     }
 	
 	@ShellMethod("Finds n for n^2 + 5n + 18, where n is integer between 0 and 10000")
-	public long find (@ShellOption long lowerBound,@ShellOption long higherBound, @ShellOption long target) {
+	public long find (@ShellOption (defaultValue="0") long lowerBound,@ShellOption(defaultValue="10000") long higherBound, @ShellOption(defaultValue="7363094") long target) {
 	    return finder.findN(lowerBound, higherBound, target);
 	    
 	}
