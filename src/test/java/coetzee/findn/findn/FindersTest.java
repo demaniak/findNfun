@@ -1,5 +1,7 @@
 package coetzee.findn.findn;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -22,6 +24,7 @@ public class FindersTest {
         long n = finder.findN(0l, 10000, 7363094l);
         
         log.debug("DumbFinder Found n at {}, after {}ms", n, System.currentTimeMillis() - startTime);
+        assertEquals(7363094, prob.calc(n));
     }
     
     @Test
@@ -29,8 +32,11 @@ public class FindersTest {
         Div2Finder finder = new Div2Finder();
         finder.setProblem( prob);
         final long startTime = System.currentTimeMillis();
-        long n = finder.findN(0l, 10000, 7363094l);
+        long n = finder.findN(0l, 10000, 7363094l);       
+        
         log.debug("Div2Finder Found n at {} after {}ms", n, System.currentTimeMillis() - startTime);
+        
+        assertEquals(7363094, prob.calc(n));
     }
     
 
