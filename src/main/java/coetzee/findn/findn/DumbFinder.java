@@ -6,6 +6,12 @@ import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * Brute force finder - starting at the lower bound, just iteratively calculates a value for each value of N, unilt
+ * we hit the target.
+ *
+ */
 @Slf4j
 @Service
 @ConditionalOnProperty(name="spring.application.finder.impl", havingValue="DumbFinder")

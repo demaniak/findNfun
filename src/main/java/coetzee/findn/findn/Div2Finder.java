@@ -6,6 +6,19 @@ import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * <p>
+ * Picks the middle of the known values of N, performs calculation, and gets the difference between
+ * calculated value and the target. If negative (&lt; 0), we go recursive with the same lower bound, but the higher bound
+ * adjusted to the test N value we just used. If positive (&gt; 0), we again go recursive, with the lower bound adjusted 
+ * to test N value, and the same higher bound.
+ * </p>
+ * <p>
+ * It might be that we could find a solution faster by using random starting points, or the golden mean or something.
+ * But this seems to work well enough within the bounds of the problem!
+ * </p>
+ *
+ */
 @Service
 @Slf4j
 @ConditionalOnProperty(name="spring.application.finder.impl",havingValue="Div2Finder")
