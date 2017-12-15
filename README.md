@@ -19,4 +19,3 @@ The default (generated) Spring unit tests hangs because the shell is opened and 
 
 Not sure how to get around this yet, so I deleted the default test (which was just loading the spring context anyway - usefull
 as a sanity check, but certainly not relevant for my goals).
-
